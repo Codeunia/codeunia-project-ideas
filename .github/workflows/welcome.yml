@@ -1,0 +1,27 @@
+name: Welcome New Contributors
+
+on:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet Contributor
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 **Welcome to Codeunia!**
+            
+            Thanks for opening your first issue here. We're excited to have you contributing! 🚀  
+            Be sure to check out our [contribution guide](../blob/main/CONTRIBUTING.md) and project ideas.
+
+          pr-message: |
+            🎉 **Awesome! You’ve just opened your first pull request at Codeunia!**
+            
+            We're thrilled to have you. Don’t forget to link it to an issue (if any), and feel free to tag us if you need support.  
+            Happy Coding 💻 — Let’s build something impactful together!
