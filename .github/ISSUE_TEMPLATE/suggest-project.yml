@@ -1,25 +1,20 @@
----
-
-### ✅ `.github/ISSUE_TEMPLATE/suggest-project.yml`
-
-```yml
 name: Project Idea Proposal
 description: Propose a new coding project for the Codeunia community!
 title: '[PROJECT IDEA]: Your Creative Project Title'
 labels: ['idea', 'new-idea']
-assignees: []
+assignees: [] # Can be assigned by leaders later
 body:
   - type: markdown
     attributes:
       value: |
-        🙌 Thanks for proposing a project! Fill in the details below 👇
+        🚀 Thanks for taking the time to propose a new project idea for Codeunia! Please fill out the following details as thoroughly as possible.
 
   - type: input
     id: project-name
     attributes:
       label: Project Name
-      description: Give your project a short and clear title.
-      placeholder: e.g., Smart Resume Parser, CodeMentor Bot
+      description: What do you want to call your project?
+      placeholder: e.g., Community Dashboard, Smart Todo App
     validations:
       required: true
 
@@ -27,8 +22,8 @@ body:
     id: problem-statement
     attributes:
       label: Problem Statement / Inspiration
-      description: What's the issue or need you're solving?
-      placeholder: What motivated this idea?
+      description: What problem does this project solve? What inspired you to think of this?
+      placeholder: Describe the need or the idea that sparked this project.
     validations:
       required: true
 
@@ -36,8 +31,8 @@ body:
     id: proposed-solution
     attributes:
       label: Proposed Solution / Features
-      description: What will the project do? Key features?
-      placeholder: Describe functionality, user flow, or approach.
+      description: Briefly describe how your project will work and its core features.
+      placeholder: What will it do? What will it look like?
     validations:
       required: true
 
@@ -45,49 +40,66 @@ body:
     id: primary-tech
     attributes:
       label: Primary Technologies/Skills
+      description: What main technologies, languages, or skills do you envision this project using?
       multiple: true
       options:
         - Python
         - JavaScript (Frontend)
         - JavaScript (Backend/Node.js)
+        - HTML/CSS
         - React
         - Angular
         - Vue.js
-        - HTML/CSS
         - Java
         - C++
+        - C#
         - Go
+        - Rust
         - Database (SQL/NoSQL)
         - Machine Learning/AI
-        - Mobile Development
-        - IoT / ESP / Raspberry Pi
-        - Other
+        - Data Science
+        - Mobile Development (Android/iOS)
+        - Cloud (AWS/GCP/Azure)
+        - IoT
+        - Game Development
+        - Other (please specify in 'Additional Notes')
     validations:
       required: true
 
   - type: dropdown
     id: difficulty
     attributes:
-      label: Estimated Difficulty
+      label: Estimated Difficulty Level
+      description: How challenging do you think this project will be for a student?
       options:
-        - Beginner-Friendly
-        - Intermediate
-        - Advanced
+        - Beginner-Friendly (Great for first-time contributors)
+        - Intermediate (Requires some prior experience)
+        - Advanced (Complex, suitable for experienced developers)
     validations:
       required: true
 
   - type: textarea
     id: potential-impact
     attributes:
-      label: Potential Impact / Learning
-      placeholder: Skills contributors might learn or project use-case.
+      label: Potential Impact / Learning Outcomes
+      description: What kind of impact could this project have? What skills might contributors learn?
+      placeholder: e.g., Improve community engagement, learn full-stack development, gain experience with ML models.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes or Resources
+      description: Any other information, diagrams, links, or specific requirements?
+      placeholder: Feel free to add anything else relevant!
     validations:
       required: false
 
   - type: checkboxes
-    id: interested
+    id: interested-in-leading
     attributes:
-      label: Would you like to lead or contribute?
+      label: Your Role
       options:
-        - label: I'm interested in leading this project.
-        - label: I'm interested in contributing.
+        - label: I am interested in potentially leading this project.
+        - label: I am interested in contributing to this project.
