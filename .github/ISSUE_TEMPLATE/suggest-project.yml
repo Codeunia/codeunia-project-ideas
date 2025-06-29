@@ -1,0 +1,93 @@
+---
+
+### ✅ `.github/ISSUE_TEMPLATE/suggest-project.yml`
+
+```yml
+name: Project Idea Proposal
+description: Propose a new coding project for the Codeunia community!
+title: '[PROJECT IDEA]: Your Creative Project Title'
+labels: ['idea', 'new-idea']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🙌 Thanks for proposing a project! Fill in the details below 👇
+
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: Give your project a short and clear title.
+      placeholder: e.g., Smart Resume Parser, CodeMentor Bot
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement / Inspiration
+      description: What's the issue or need you're solving?
+      placeholder: What motivated this idea?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution / Features
+      description: What will the project do? Key features?
+      placeholder: Describe functionality, user flow, or approach.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: primary-tech
+    attributes:
+      label: Primary Technologies/Skills
+      multiple: true
+      options:
+        - Python
+        - JavaScript (Frontend)
+        - JavaScript (Backend/Node.js)
+        - React
+        - Angular
+        - Vue.js
+        - HTML/CSS
+        - Java
+        - C++
+        - Go
+        - Database (SQL/NoSQL)
+        - Machine Learning/AI
+        - Mobile Development
+        - IoT / ESP / Raspberry Pi
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Estimated Difficulty
+      options:
+        - Beginner-Friendly
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+
+  - type: textarea
+    id: potential-impact
+    attributes:
+      label: Potential Impact / Learning
+      placeholder: Skills contributors might learn or project use-case.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: interested
+    attributes:
+      label: Would you like to lead or contribute?
+      options:
+        - label: I'm interested in leading this project.
+        - label: I'm interested in contributing.
